@@ -20,6 +20,7 @@ const knex = require('knex')({
       user: '',
       password: '',
       database: 'smart-brain',
+      ssl: true
     },
   });
 
