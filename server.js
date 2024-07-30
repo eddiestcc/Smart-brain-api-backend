@@ -15,7 +15,7 @@ const port = process.env.PORT || 8080;
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      host: '127.0.0.1',
+      host: '52.41.36.82' || '54.191.253.12' || '44.226.122.3',
       port: 5432,
       user: '',
       password: '',
