@@ -33,7 +33,7 @@ app.use(cors());
 
 // ROOT
 app.get('/', (req,res) => {
-    res.json(database.users);
+    res.json('database.users');
 })
 // SIGN IN
 app.post('/signin', (req,res) => controlSignIn(req,res,knex,bcrypt))
