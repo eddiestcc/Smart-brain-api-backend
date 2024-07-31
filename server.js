@@ -12,7 +12,7 @@ const { controlImage , controlApiCall } = require('./controllers/controlImage');
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      connectionString: process.env.DATABSE_URL,
+      connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a/mydb_b0sz',
       port: 5432,
       username: 'mydb_b0sz_user',
       password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
