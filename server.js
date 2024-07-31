@@ -47,7 +47,7 @@ app.put('/image' , (req,res) => controlImage(req,res,knex));
 app.post('/imageurl' , (req,res) => controlApiCall(req,res));
 
 // CONSOLE 
-app.listen(3000, () => {
+app.listen(PORT || 3000, () => {
     console.log(`App is running of port ${PORT}`);
 });
 
