@@ -6,6 +6,8 @@ const { controlRegister } = require('./controllers/controlRegister.js');
 const { controlProfile } = require('./controllers/controlProfile');
 const { controlImage , controlApiCall } = require('./controllers/controlImage');
 
+const PORT = process.env.PORT || 3000;
+
 
 // DATABASE
 // KNEX
@@ -13,7 +15,7 @@ const knex = require('knex')({
     client: 'pg',
     connection: {
       connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a/mydb_b0sz',
-      port: 5432,
+      port: PORT,
       username: 'mydb_b0sz_user',
       password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
       database: 'mydb_b0sz',
@@ -45,6 +47,6 @@ app.post('/imageurl' , (req,res) => controlApiCall(req,res));
 
 // CONSOLE 
 app.listen(3000, () => {
-    console.log('App is running of port 3000');
+    console.log(`App is running of port ${PORT}`);
 });
 
