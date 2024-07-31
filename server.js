@@ -38,7 +38,7 @@ app.get('/', (req,res) => {
 // SIGN IN
 app.post('/signin', (req,res) => { signin.controlSignIn(req,res,knex,bcrypt)})
 // REGISTER
-app.post('/register', (req,res) => { register.controlRegister(req,res,knex,bcrypt)})
+app.post('/register', (req,res) => { controlRegister(req,res,knex,bcrypt)})
 // Profile 
 app.get('/profile/:id', (req,res) => controlProfile(req,res,knex));
 // Image 
