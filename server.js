@@ -12,11 +12,11 @@ const { controlImage , controlApiCall } = require('./controllers/controlImage');
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      host: 'dpg-cqkhd0rv2p9s738jfsj0-a',
+      hostname: 'dpg-cqkhd0rv2p9s738jfsj0-a',
       port: 5432,
-      user: 'mydb_b0sz_user',
+      username: 'mydb_b0sz_user',
       password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
-      // database: 'smart-mydb_b0sz',
+      database: 'mydb_b0sz',
     },
   });
 
@@ -30,7 +30,7 @@ app.use(cors());
 
 // ROOT
 app.get('/', (req,res) => {
-    res.json('database.users');
+    res.json(knex.database);
 })
 // SIGN IN
 app.post('/signin', (req,res) => controlSignIn(req,res,knex,bcrypt))
