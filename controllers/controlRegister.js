@@ -4,7 +4,7 @@ const controlRegister = (req,res,knex,bcrypt) => {
       return res.status(400).json('incorrect form submission');
     }
     const hash = bcrypt.hashSync(password);
-        knex.database.transaction(trx => {
+        knex.transaction(trx => {
             trx.insert({
                 hash: hash,
                 email: email
