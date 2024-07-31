@@ -12,7 +12,7 @@ const { controlImage , controlApiCall } = require('./controllers/controlImage');
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      hostname: process.env.DATABSE_URL,
+      connectionString: process.env.DATABSE_URL,
       port: 5432,
       username: 'mydb_b0sz_user',
       password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
