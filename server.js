@@ -20,6 +20,7 @@ const knex = require('knex')({
       username: 'mydb_b0sz_user',
       password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
       database: 'mydb_b0sz',
+      ssl: true,
     },
   });
 
