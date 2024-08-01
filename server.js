@@ -15,7 +15,9 @@ const knex = require('knex')({
     client: 'pg',
     connection: { 
       // connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a/mydb_b0sz',
-      host: 'ddpg-cqkhd0rv2p9s738jfsj0-a.oregon-postgres.render.com' ,
+      connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a.oregon-postgres.render.com/mydb_b0sz',
+      // connectionString: 'ddpg-cqkhd0rv2p9s738jfsj0-a.oregon-postgres.render.com' ,
+      hostname: 'dpg-cqkhd0rv2p9s738jfsj0-a',
       port: PORT,
       username: 'mydb_b0sz_user',
       password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
