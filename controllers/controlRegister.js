@@ -22,12 +22,12 @@ const controlRegister = (req,res,knex,bcrypt) => {
                 .then(user => {
                     res.json(user[0]);
                 })
-                .catch(console.log(err));
+                // .catch(console.log(err));
             })
             .then(trx.commit)
             .catch(trx.rollback)
         })
-    .catch(err => res.status(400).json('Unable to register'));
+    // .catch(err => res.status(400).json('Unable to register'));
 }
 
 exports.controlRegister = controlRegister;
