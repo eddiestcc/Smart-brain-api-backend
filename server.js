@@ -49,7 +49,7 @@ app.put('/image' , (req,res) => controlImage(req,res,knex));
 app.post('/imageurl' , (req,res) => controlApiCall(req,res));
 
 // CONSOLE 
-// app.listen(PORT, () => {
-//     console.log(`App is running of port ${PORT}`);
-// });
+app.listen(PORT, () => {
+    console.log(`App is running of port ${PORT}`);
+});
 
