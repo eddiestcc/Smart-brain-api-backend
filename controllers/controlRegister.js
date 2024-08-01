@@ -3,7 +3,7 @@ const controlRegister = (req,res,knex,bcrypt) => {
     if (!email || !name || !password) {
       return res.status(400).json('incorrect form submission');
     } 
-    const hash = bcrypt.hashSync(password);
+        const hash = bcrypt.hashSync(password);
         knex.transaction(trx => {
             trx.insert({
                 hash: hash,
@@ -20,7 +20,7 @@ const controlRegister = (req,res,knex,bcrypt) => {
                     joined: new Date()
                 })
                 .then(user => {
-                    res.json(user[0]);
+                    res.json('Register response: ',user[0]);
                 })
                 .catch(console.log(err));
             })
