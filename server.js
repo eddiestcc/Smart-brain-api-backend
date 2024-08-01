@@ -21,11 +21,11 @@ const knex = require('knex')({
       // password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
       // database: 'mydb_b0sz',
       connectionString: process.env.DATABASE_URL,
-      host: config['dpg-cqkhd0rv2p9s738jfsj0-a'],
-      port: config[PORT],
-      user: config['mydb_b0sz_user'],
-      database: config['mydb_b0sz'],
-      password: config['gpSLxC5UmrIcojhmpzsuCLH5dsjja77N'],
+      host: process.env['dpg-cqkhd0rv2p9s738jfsj0-a'],
+      port: process.env[PORT],
+      user: process.env['mydb_b0sz_user'],
+      database: process.env['mydb_b0sz'],
+      password: process.env['gpSLxC5UmrIcojhmpzsuCLH5dsjja77N'],
     },
   });
 
