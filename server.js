@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 const knex = require('knex')({
     client: 'pg',
     connection: {
+      connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a/mydb_b0sz',
       hostname: 'dpg-cqkhd0rv2p9s738jfsj0-a' ,
       port: PORT,
       username: 'mydb_b0sz_user',
