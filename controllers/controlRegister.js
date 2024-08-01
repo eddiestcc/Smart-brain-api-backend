@@ -20,7 +20,6 @@ const controlRegister = (req,res,knex,bcrypt) => {
                     joined: new Date()
                 })
                 .then(user => {
-                    res.console.log(user[0])
                     res.json(user[0]);
                 })
                 .catch(console.log(err));
