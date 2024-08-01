@@ -37,9 +37,9 @@ app.get('/', (req,res) => {
     res.json(knex.database);
 })
 // SIGN IN
-app.post('/signin', (req,res) => { signin.controlSignIn(req,res,knex,bcrypt)})
+app.post('/signin', (req,res) => controlSignIn(req,res,knex,bcrypt));
 // REGISTER
-app.post('/register', (req,res) => { controlRegister(req,res,knex,bcrypt)})
+app.post('/register', (req,res) => controlRegister(req,res,knex,bcrypt));
 // Profile 
 app.get('/profile/:id', (req,res) => controlProfile(req,res,knex));
 // Image 
