@@ -17,7 +17,7 @@ const knex = require('knex')({
       connectionString: process.env.DATABASE_URL,
       ssl: {rejectUnauthorized: false},
       hostname: process.env.DATABASE_HOST,
-      port: 5432,
+      port: PORT,
       user: process.env.DATABASE_USER,
       password: process.env.DATABASE_PW,
       database: process.env.DATABASE_DB,
