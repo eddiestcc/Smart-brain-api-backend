@@ -17,7 +17,7 @@ const knex = require('knex')({
       connectionString: process.env.DATABASE_URL,
       ssl: {rejectUnauthorized: false},
       hostname: process.env.DATABASE_HOST,
-      port: PORT,
+      port: 5432,
       user: process.env.DATABASE_USER,
       password: process.env.DATABASE_PW,
       database: process.env.DATABASE_DB,
@@ -49,7 +49,7 @@ app.put('/image' , (req,res) => controlImage(req,res,knex));
 app.post('/imageurl' , (req,res) => controlApiCall(req,res));
 
 // CONSOLE 
-app.listen(PORT, () => {
-    console.log(`App is running of port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`App is running of port ${PORT}`);
+// });
 
