@@ -20,7 +20,7 @@ const knex = require('knex')({
       // username: 'mydb_b0sz_user',
       // password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
       // database: 'mydb_b0sz',
-      connectionString: config.DATABASE_URL,
+      connectionString: process.env.DATABASE_URL,
       host: config['dpg-cqkhd0rv2p9s738jfsj0-a'],
       port: config[PORT],
       user: config['mydb_b0sz_user'],
