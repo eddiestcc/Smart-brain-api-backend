@@ -14,14 +14,13 @@ const PORT = process.env.PORT || 3000;
 const knex = require('knex')({
     client: 'pg',
     connection: { 
-      connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a/mydb_b0sz',
-      // connectionString: 'postgresql://mydb_b0sz_user:gpSLxC5UmrIcojhmpzsuCLH5dsjja77N@dpg-cqkhd0rv2p9s738jfsj0-a.oregon-postgres.render.com/mydb_b0sz',
-      // connectionString: 'ddpg-cqkhd0rv2p9s738jfsj0-a.oregon-postgres.render.com' ,
-      hostname: 'dpg-cqkhd0rv2p9s738jfsj0-a',
+      connectionString: process.env.DATABASE_URL,
+      ssl: {rejectUnauthorized: false},
+      hostname: process.env.DATABASE_HOST,
       port: PORT,
-      username: 'mydb_b0sz_user',
-      password: 'gpSLxC5UmrIcojhmpzsuCLH5dsjja77N',
-      database: 'mydb_b0sz',
+      user: process.env.DATABASE_USER,
+      password: process.env.DATABASE_PW,
+      database: process.env.DATABASE_DB,
     },
   });
 
